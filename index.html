@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>박준영 자기소개(기말고사)</title>
+    <style>
+                .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 5px 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #575757;
+        }
+        html {
+            scroll-padding-top: 100px;  /* 네비게이션 바를 더 올려서 100px 여유 추가 */
+        }
+
+        /* 내비게이션 바 스타일 */
+        nav {
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            height: 60px;
+            display: flex;
+            justify-content: space-between; /* 좌우 정렬 */
+            padding: 0 20px; /* 좌우 여백 */
+                }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 10px 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .search-bar {
+        display: flex;
+        align-items: center; /* 세로 가운데 정렬 */
+        margin-right: 100px; /* 우측에서 살짝 왼쪽으로 이동 */
+            }
+.search-bar input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: #575757;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #444;
+}
+        /* 부드러운 스크롤 효과 추가 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 스크롤을 고려한 바디 여백 제거 */
+        body {
+            margin: 0; /* margin-top 제거 */
+        }
+
+        .balloon {
+            display: none;
+            position: absolute;
+            top: 100%;  /* 이미지 바로 아래로 배치 */
+            left: 0;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            max-width: 300px;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        /* 기존 스타일 코드 */
+        p {
+            font-size: 25px;
+        }
+            .name_job {
+                position: absolute;
+                top: 180px; 
+                left: 300px;
+                font-size: 50px;
+            }
+
+            .education {
+                position: absolute;
+                top : 1200px;
+                left: 120px;
+            }
+
+            .images_1 {
+                width: 2000px;
+                height: auto; 
+                position: absolute;
+                top : 1370px;
+                left: 250px;
+            }  
+
+            .images_1_note {
+                position: absolute;
+                top : 1400px;
+                left: 700px;
+            }
+            .images_2 {    
+                position: absolute;
+                top : 1700px;
+                left: 250px;
+            }
+
+            .images_2_note {
+                position: absolute;
+                top : 1730px;
+                left: 700px;
+            }
+            .images_3 {
+                position: absolute;
+                top : 2000px;
+                left: 250px;
+            }
+            .images_3_note {
+                position: absolute;
+                top : 2030px;
+                left: 700px;
+            }
+            .images_4 {
+                position: absolute;
+                top : 2300px;
+                left: 250px;
+            }
+
+            .images_4_note {
+                position: absolute;
+                top :2300px;
+                left: 700px;
+            }
+            .introduce2 {
+                position: absolute;
+                top : 2600px;
+                left: 120px;
+            }
+
+        /* 검색 바 스타일 추가 */
+        .search-bar {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .search-bar input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #575757;
+        }
+    </style>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'  /* center로 설정하면 더 위로 이동 */
+                });
+            });
+        });
+
+        function toggleBalloon(id) {
+            var balloon = document.getElementById(id);
+            // Toggle the balloon visibility
+            if (balloon.style.display === 'block') {
+                balloon.style.display = 'none';
+            } else {
+                balloon.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 내비게이션 바 추가 -->
+    <nav>
+        <ul>
+            <li><a href="#name_job">소개</a></li>
+            <li><a href="#education">학력</a></li>
+            <li><a href="#images_1">학사</a></li>
+            <li><a href="#images_2">군복무</a></li>
+            <li><a href="#images_3">프로젝트</a></li>
+            <li><a href="#images_4">회사</a></li>
+            <li><a href="#introduce2">기술</a></li>
+            <li><a href="#certifications">자격증</a></li>
+            <li><a href="#project">프로젝트 경험</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="검색..." />
+            <button type="submit">검색</button>
+        </div>
+    </nav>
+    
+
+    <div class="name_job" id="name_job">
+        <h1>Park June Young</h1>
+        <p>Data Analyst</p>
+        <hr>
+    </div>
+    <div class="contacts" id="contacts" style="position: absolute; top: 70%; left: 80%; transform: translate(-80%, -70%); font-size: 25px; padding: 20px;">
+        <ul>
+            <h3>Contacts</h3>
+            <li>name: 박 준 영</li>
+            <li>학번: 202411483</li>
+            <li>학부: 시스템경영안전공학부</li>
+            <li>phone: 010-6325-1145</li>
+            <li>email: pde4735@naver.com</li>
+        </ul>
+    </div>
+    
+    <div class="introduce" id="introduce" style="position: absolute; top: 800px; left: 100px;">
+        <h1>Introduce Myself</h1>
+        <p>저는 데이터 분야 취업 목표로 하고 있습니다.<br>
+            세부적으로는 데이터 애널리스트를 준비중이며<br>
+            현재 다음과 같이 계획중이거나 이미 완료된 상태입니다. </p>
+    </div>
+
+    <div class = education id="education">
+        <h1>Education</h1>
+        <p>부경대학교 시스템경영안전공학부 기술데이터공학 전공</p>
+    </div> 
+
+    <div class = "images_1" id="images_1">
+        <H1>Bachelor's Degree </H1>
+        <img src = "images/공부2.png"/>
+    </div>
+    <div class = "images_1_note">
+        <p><strong>시스템경영안전공학부</strong> 2학년에 <strong>기술 데이터공학 전공</strong>에 진학하여<br>
+        전체적인 데이터 진로에 방향성을 잡습니다.<br>
+        또한, 데이터 분석에 필요한 기초 역량을 기르기 위해<br>
+        저학년에는 기초적인 코딩(<strong><i>Python, R, SQL</i></strong>)과 <strong>통계학</strong>에 관한 <br>
+        교양과목들을 이수하였습니다.</p>
+        <hr>
+    </div>
+    <div class = "images_2" id="images_2">
+        <H1>Military service</H1>
+        <img src = "images/군대.png"/>
+    </div>
+    <div class = "images_2_note">
+        <p>병역문제를 문제로 삶지 않으며 <strong>산업기능요원</strong>(정보처리산업기능요원)에<br>
+            편입하여 병역문제를 기회로 만들 것입니다.따라서 정보처리산업기능요원에<br>
+            필요한 <strong>정보처리기능사, 정보처리산업기사</strong> 등을 취득하여 정보처리 관련 학과<br>
+            1년이상 이수 조건을 만족하여 it 중소기업의 실제 <strong>실무경험</strong>을 갖출 것 입니다.</p>
+            <hr>
+    </div>
+    <div class = "images_3" id="images_3">
+        <H1>Project</H1>
+        <img src = "images/프로젝트.png"/>
+    </div>
+    <div class = "images_3_note">
+        <p>또한 대학생 공모전에 나가 포트폴리오에 채울 프로젝트등을 더 경험하여 실무경험을 <br>
+           바탕으로 실제 실무경험을 바탕으로 여러 공모전에도 나가고 <strong>프로젝트</strong>에도 참여하여<br>
+           <strong>실무적인 데이터분석 역량</strong>을 기를 것 입니다.
+        </p>
+        <hr>
+    </div>
+    <div class = "images_4" id="images_4">
+        <H1>Company</H1>
+        <img src = "images/회사.png"/>
+    </div>
+    <div class = "images_4_note">
+        <p>저는 네이버(NAVER)회사에 지원 할 것 입니다.먼저 네이버에 지원하기 전에 작은 스타트업<br> 
+            또는 중소기업에 취직하여 경력을 쌓으려는 방향으로 나아가려합니다.가서 제가 얻을 역량은<br>
+            데이터 분석에 그치지 않는 데이터 분석 후 데이터 Analyst가 중요한 분석한 <strong>분석 데이터를<br>
+            이용한 의사결정</strong>에 도움이 되는 부분을 기르고 있습니다.
+        </p>
+        <HR>
+    </div>
+    <div class="certifications" id="certifications" style="position: absolute; top: 3200px; left: 100px;">
+        <h1>License</h1>
+        <p>자격증 수료(예정)</p><br>
+        <hr>
+        <p>정보처리기능사</p>
+        <p>정보처리산업기사</p>
+        <p>정보처리기사</p>
+        <p>SQLD</p>
+        <p>ADsP (Advanced Data Analytics Semi-Professional)</p>
+        <p>ADP (Advanced Data Analytics Professional)</p>
+        <p>IBM (Data Science Professional Certificate)</p>
+        <hr>
+    </div>
+    <div class = introduce2 id="introduce2">
+        <h1>Skills</h1>
+        <p>저의 장점은 여러 프로그래밍 언어를 접해보면서<br>
+            언어의 범용성을 높였습니다.제가 작업하는 언어는 다음과 같습니다.   
+        </p>
+    </div>  
+    <div style="position: absolute; top: 2770px; left: 1010px;">
+        <img src = "images/python.png" width="300">
+        <P>Python을 활용한 머신러닝</P>
+    </div>
+    <div style="position: absolute; top: 2800px; left: 600px;">
+        <img src = "images/R.png" width="300">
+        <p>R을 활용한 통계적 <Br>데이터 수집 및 데이터 분석</p>
+    </div>
+    <div style="position: absolute; top: 2780px; left:200px;">
+        <img src = "images/SQL.png" width="300">
+        <p>SQL을 활용한 데이터 수집</p>
+    </div>
+    <div style="position: absolute; top: 2800px; left: 1390px;">
+        <img src = "images/HTML_CSS_JAVA.png" width="300">
+        <p>시각화 된 데이터를 반영한 데이터<Br> 차트 제작,
+            데이터에 관한 의견 보고 작성</p>
+    </div>
+    <div style="position: absolute; top: 3900px; left: 100px;" id="project">
+        <h1 style="position: relative; top: -50px;">Project Experience</h1>
+    
+        <div style="position: absolute; top: 50px; left: 100px;" class="image-container">
+            <img src="images/캡처1.png" width="200" onclick="toggleBalloon('balloon1')">
+            <div id="balloon1" class="balloon" style="top: 220px; left: 50px;">BaseBall Game: 함수 구현 및 문제 해결</div>
+        </div>
+    
+        <div style="position: absolute; top: 50px; left: 400px;" class="image-container">
+            <img src="images/캡처2.png" width="350" onclick="toggleBalloon('balloon2')">
+            <div id="balloon2" class="balloon" style="top: 220px; left: 50px;">백터와 행렬 데이터 분석 함수: 1줄코드 작성 및 문제 해결</div>
+        </div>
+    
+        <div style="position: absolute; top: 50px; left: 800px;" class="image-container">
+            <img src="images/캡처3.png" width="350" onclick="toggleBalloon('balloon3')">
+            <div id="balloon3" class="balloon" style="top: 220px; left: 50px;">Chat Gpt기반 데이터 분석문제 해결</div>
+        </div>
+    
+        <div style="position: absolute; top: 50px; left: 1200px;" class="image-container">
+            <img src="images/캡처4.png" width="450" onclick="toggleBalloon('balloon4')">
+            <div id="balloon4" class="balloon" style="top: 220px; left: 50px;">Programmers 1~2단계 함수 해결</div>
+        </div>
+    
+        <!-- 두 번째 행 -->
+        <div style="position: absolute; top: 430px; left: 200px;" class="image-container">
+            <img src="images/캡처5.jpg" width="450" onclick="toggleBalloon('balloon5')">
+            <div id="balloon5" class="balloon" style="top: 220px; left: 50px;">프로젝트: 독일 신용예측평가 프로그램</div>
+        </div>
+    
+        <div style="position: absolute; top: 430px; left: 850px;" class="image-container">
+            <img src="images/캡처5.png" width="450" onclick="toggleBalloon('balloon6')">
+            <div id="balloon6" class="balloon" style="top: 220px; left: 50px;">프로젝트: 가위바위보 게임</div>
+        </div>
+    </div>
+    
+</div>
+
+    </div>
+
+</body>
+</html>
