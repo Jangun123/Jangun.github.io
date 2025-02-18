@@ -6,22 +6,21 @@
     <title>JuneYoungPark's portfolio</title>
         <style>
             .image-container {
-                position: relative;
-                width: 30%;
-                height: 350px;
-                border-radius: 15px;
-                overflow: hidden;
-                display: inline-block;
-                margin: 10px;
+    position: relative;
+    width: 30%;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 10px;
             }
-        
+
             .image-container img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 transition: filter 0.3s ease;
             }
-        
             .image-container .balloon {
                 position: absolute;
                 top: 50%;
@@ -33,20 +32,23 @@
                 font-weight: bold;
                 padding: 10px;
                 border-radius: 5px;
-                display: none;
+                opacity: 0;  /* 시작 시 보이지 않도록 설정 */
+                transition: opacity 0.3s ease;  /* opacity만 변경되도록 설정 */
+                white-space: nowrap;  /* 줄바꿈 방지 */
+                overflow: hidden;     /* 텍스트가 넘칠 경우 숨기기 */
+                text-overflow: ellipsis; /* 긴 텍스트는 ...으로 표시 */
             }
-        
-            #imageContainer0 .balloon {
-                background-color: transparent;
+
+            .image-container:hover img {
+                filter: blur(5px);
+                opacity: 1;
             }
-        
+
             .image-container:hover .balloon {
-                display: block;
+                visibility: visible;
+                opacity: 1;
             }
-        
-            #imageContainer0 {
-                all: unset;
-            }
+
             nav {
                 background-color: #333;
                 position: fixed;
@@ -55,66 +57,103 @@
                 z-index: 1000;
                 height: 60px;
                 display: flex;
-                justify-content: center; /* 중간 정렬 */
-                align-items: center; /* 세로 정렬 */
+                justify-content: center;
+                align-items: center;
                 padding: 0 20px;
                 transform: scale(1.1);
                 transform-origin: top left;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             }
-        
+
             nav ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
                 display: flex;
-                justify-content: center; /* 버튼들이 가로로 중앙 정렬됨 */
+                justify-content: center;
                 width: 100%;
             }
-                    
+
             nav ul li {
                 margin: 0 20px;
             }
-        
+
             nav ul li a {
                 color: white;
                 text-decoration: none;
                 font-size: 20px;
                 padding: 10px 20px;
             }
-        
+
             nav ul li a:hover {
                 background-color: #575757;
                 border-radius: 5px;
-            }        
+            }
 
             html {
                 scroll-behavior: smooth;
             }
-        
+
             body {
                 margin: 0;
+                transform: scale(0.9);
+                transform-origin: top left;
             }
-        
+
             p {
                 font-size: 25px;
             }
-        
+
             .name_job {
                 position: absolute;
                 top: 180px;
                 left: 300px;
                 font-size: 50px;
             }
-        
+
             .education {
                 position: absolute;
                 top: 1200px;
                 left: 120px;
             }
-            
-            body {
-                transform: scale(0.9);
-                transform-origin: top left; /* 크기가 줄어들 때 기준점을 왼쪽 상단으로 설정 */
+
+            .contacts {
+                position: absolute;
+                top: 700px;
+                left: 1200px;
+                font-size: 28px;
+                padding: 30px;
+            }
+
+            .introduce {
+                position: absolute;
+                top: 700px;
+                left: 100px;
+            }
+
+            .certifications {
+                position: absolute;
+                top: 1450px;
+                left: 100px;
+            }
+
+            .certifications2 {
+                position: absolute;
+                top: 1450px;
+                left: 800px;
+            }
+
+            .certifications3 {
+                position: absolute;
+                top: 1450px;
+                left: 1300px;
+            }
+
+            #project {
+                position: absolute;
+                top: 2000px;
+                left: 0;
+                right: 0;
             }
 
         </style>
@@ -232,12 +271,12 @@
 
     <div id="imageContainer7" class="image-container" style="position: absolute; top: 50px; left: 4%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
         <img src="images/포폴.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Portfolio - HTML,CSS,JavaScript</div>
+        <div class="balloon">Portfolio - HTML, CSS, JavaScript</div>
     </div>
 
     <div id="imageContainer1" class="image-container" style="position: absolute; top: 50px; left: 35%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
         <img src="images/캡처2.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Oneline Vectors and Matrices - python</div>
+        <div class="balloon">Oneline Vectors and Matrices - Python</div>
     </div>
 
     <div id="imageContainer2" class="image-container" style="position: absolute; top: 50px; left: 66%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
@@ -252,12 +291,12 @@
 
     <div id="imageContainer4" class="image-container" style="position: absolute; top: 450px; left: 35%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
         <img src="images/캡처5.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Project: 독일 신용예측평가 프로젝트</div>
+        <div class="balloon">Project: 독일 신용예측평가 데이터 분석 </div>
     </div>
 
     <div id="imageContainer5" class="image-container" style="position: absolute; top: 450px; left: 66%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
         <img src="images/캡처5.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Project: 가위바위보 게임</div>
+        <div class="balloon">Project: 가위바위보 게임 만들기</div>
     </div>
 
     <div id="imageContainer6" class="image-container" style="position: absolute; top: 850px; left: 4%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
@@ -266,43 +305,5 @@
     </div>
 </div>
 
-    </div>
-        <style>
-            .image-container {
-                position: relative;
-            }
-        
-            .balloon {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: white;
-                font-size: 20px;
-                font-weight: bold;
-                visibility: hidden; 
-                opacity: 0; 
-                transition: opacity 0.3s ease, visibility 0s 0.3s; 
-            }
-        
-            .image-container:hover img {
-                filter: blur(5px); 
-            }
-        
-            .image-container:hover .balloon {
-                visibility: visible; 
-                opacity: 1; 
-                transition: opacity 0.3s ease; 
-            }
-        
-            #imageContainer0 img {
-                filter: none !important;
-            }
-        </style>
-
-    </div>
-
-    </div>
-        
     </body>    
 </html>
