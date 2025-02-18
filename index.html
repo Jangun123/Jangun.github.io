@@ -5,6 +5,7 @@
     
     <title>JuneYoungPark's portfolio</title>
     <style>
+        
         .image-container {
             position: relative;
             width: 30%;
@@ -24,14 +25,20 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: black; /* 텍스트 색상을 검정색으로 설정 */
+            color: white; /* 텍스트 색상 */
+            background-color: rgba(0, 0, 0, 0.5); /* 불투명 검은색 배경 */
             font-size: 18px;
             font-weight: bold;
+            padding: 10px; /* 텍스트 주변에 공간을 추가 */
+            border-radius: 5px; /* 네모 모서리를 둥글게 설정 (선택사항) */
         }
 
         #imageContainer0 .balloon {
-            color: black; /* 해당 ID에 대해 텍스트 색상을 검정색으로 설정 */
+            color: white; /* 텍스트 색상 */
+            background-color: transparent; /* 불투명 배경을 없애고 투명으로 설정 */
         }
+
+
 
 
         .image-container:hover .balloon {
@@ -41,32 +48,6 @@
         #imageContainer0 {
             /* Reset any styles for this specific ID */
             all: unset;
-        }
-        
-                .search-bar {
-            display: flex;
-            align-items: center;
-        }
-
-        .search-bar input[type="text"] {
-            padding: 5px 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .search-bar button {
-            padding: 5px 10px;
-            font-size: 16px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .search-bar button:hover {
-            background-color: #575757;
         }
         
         nav {
@@ -104,27 +85,7 @@
             background-color: #575757;
             border-radius: 5px;
         }
-        .search-bar {
-        display: flex;
-        align-items: center; 
-        margin-right: 100px; 
-            }
-        .search-bar input {
-            padding: 5px;
-            font-size: 16px;
-        }
-
-        .search-bar button {
-            padding: 5px 10px;
-            background-color: #575757;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .search-bar button:hover {
-            background-color: #444;
-        }
+        
 
         html {
             scroll-behavior: smooth;
@@ -170,33 +131,6 @@
             }
 
 
-        .search-bar {
-            margin: 10px 0;
-            text-align: center;
-        }
-
-        .search-bar input[type="text"] {
-            width: 300px;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .search-bar button {
-            padding: 10px 15px;
-            font-size: 16px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .search-bar button:hover {
-            background-color: #575757;
-        }
-
     </style>
     
     <script>
@@ -210,7 +144,6 @@
                 });
             });
         });
-
         function toggleBalloon(id) {
             var balloon = document.getElementById(id);
             
@@ -233,10 +166,7 @@
             <li><a href="#certifications">자격증</a></li>
             <li><a href="#project">경험</a></li>
         </ul>
-        <div class="search-bar">
-            <input type="text" placeholder="검색..." />
-            <button type="submit">검색</button>
-        </div>
+    
     </nav>
     
     <div id="imageContainer0" style="position: absolute; top: 110px; left: 1300px;" class="image-container">
@@ -307,17 +237,17 @@
 
     <div id="imageContainer7" class="image-container" style="position: absolute; top: 50px; left: 4%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
         <img src="images/포폴.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Portfolio</div>
+        <div class="balloon">Portfolio - HTML,CSS,JavaScript<</div>
     </div>
 
     <div id="imageContainer1" class="image-container" style="position: absolute; top: 50px; left: 35%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
         <img src="images/캡처2.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Vectors and Matrices</div>
+        <div class="balloon">Oneline Vectors and Matrices - python</div>
     </div>
 
     <div id="imageContainer2" class="image-container" style="position: absolute; top: 50px; left: 66%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
         <img src="images/캡처3.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Analyze data</div>
+        <div class="balloon">Analyze data - Python</div>
     </div>
 
     <div id="imageContainer3" class="image-container" style="position: absolute; top: 450px; left: 4%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
@@ -327,7 +257,7 @@
 
     <div id="imageContainer4" class="image-container" style="position: absolute; top: 450px; left: 35%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
         <img src="images/캡처5.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Project: 독일 신용예측평가 프로그램</div>
+        <div class="balloon">Project: 독일 신용예측평가 프로젝트 </div>
     </div>
 
     <div id="imageContainer5" class="image-container" style="position: absolute; top: 450px; left: 66%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
@@ -337,7 +267,7 @@
 
     <div id="imageContainer6" class="image-container" style="position: absolute; top: 850px; left: 4%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
         <img src="images/캡처1.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">BaseBall Game</div>
+        <div class="balloon">BaseBall Game - Python</div>
     </div>
 </div>
 
@@ -374,6 +304,7 @@
                 filter: none !important;
             }
         </style>
+
     </div>
 
     </div>
