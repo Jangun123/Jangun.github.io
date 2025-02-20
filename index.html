@@ -48,7 +48,7 @@
                 visibility: visible;
                 opacity: 1;
             }
-
+            
             nav {
                 background-color: #333;
                 position: fixed;
@@ -62,8 +62,10 @@
                 padding: 0 20px;
                 transform: scale(1.1);
                 transform-origin: top left;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                /* 아래 속성을 추가하거나 수정 */
+                box-shadow: none;
             }
+
 
             nav ul {
                 list-style-type: none;
@@ -188,7 +190,7 @@
         <ul>
             <li><a href="#name_job">소개</a></li>
             <li><a href="#education">학력</a></li>
-            <li><a href="#introduce2">기술</a></li>
+            <li><a href="#certifications2"">기술</a></li>
             <li><a href="#certifications">자격증</a></li>
             <li><a href="#project">경험</a></li>
         </ul>
@@ -268,43 +270,44 @@
     <hr>
 
     <div style="position: absolute; top: 2050px; left: 0; right: 0;" id="project">
-    <h1 style="position: relative; top: -50px; padding: 10px; cursor: pointer; text-align: center;">Project</h1>
+        <h1 style="position: relative; top: -50px; padding: 10px; cursor: pointer; text-align: center;">Project</h1>
 
-    <div id="imageContainer7" class="image-container" style="position: absolute; top: 50px; left: 4%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
-        <img src="images/포폴.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Portfolio - HTML, CSS, JavaScript</div>
+        <div id="imageContainer7" class="image-container" style="position: absolute; top: 50px; left: 4%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
+            <img src="images/포폴.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
+            <div class="balloon">Portfolio - HTML, CSS, JavaScript</div>
+        </div>
+
+        <div id="imageContainer1" class="image-container" style="position: absolute; top: 50px; left: 35%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
+            <img src="images/캡처2.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
+            <div class="balloon">Oneline Vectors and Matrices - Python</div>
+        </div>
+
+        <div id="imageContainer2" class="image-container" style="position: absolute; top: 50px; left: 66%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
+            <img src="images/캡처3.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
+            <div class="balloon">Analyze data - Python</div>
+        </div>
+
+        <div id="imageContainer3" class="image-container" style="position: absolute; top: 450px; left: 4%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
+            <img src="images/캡처4.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
+            <div class="balloon">Programmers</div>
+        </div>
+
+        <div id="imageContainer4" class="image-container" style="position: absolute; top: 450px; left: 35%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
+            <img src="images/캡처5.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
+            <div class="balloon">Project: 독일 신용예측평가 데이터 분석 </div>
+        </div>
+
+        <div id="imageContainer5" class="image-container" style="position: absolute; top: 450px; left: 66%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
+            <img src="images/캡처5.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
+            <div class="balloon">Project: 가위바위보 게임 만들기</div>
+        </div>
+
+        <div id="imageContainer6" class="image-container" style="position: absolute; top: 850px; left: 4%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
+            <img src="images/캡처1.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
+            <div class="balloon">BaseBall Game - Python</div>
+        </div>
     </div>
 
-    <div id="imageContainer1" class="image-container" style="position: absolute; top: 50px; left: 35%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
-        <img src="images/캡처2.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Oneline Vectors and Matrices - Python</div>
-    </div>
-
-    <div id="imageContainer2" class="image-container" style="position: absolute; top: 50px; left: 66%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
-        <img src="images/캡처3.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Analyze data - Python</div>
-    </div>
-
-    <div id="imageContainer3" class="image-container" style="position: absolute; top: 450px; left: 4%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
-        <img src="images/캡처4.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Programmers</div>
-    </div>
-
-    <div id="imageContainer4" class="image-container" style="position: absolute; top: 450px; left: 35%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
-        <img src="images/캡처5.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Project: 독일 신용예측평가 데이터 분석 </div>
-    </div>
-
-    <div id="imageContainer5" class="image-container" style="position: absolute; top: 450px; left: 66%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
-        <img src="images/캡처5.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">Project: 가위바위보 게임 만들기</div>
-    </div>
-
-    <div id="imageContainer6" class="image-container" style="position: absolute; top: 850px; left: 4%; width: 30%; height: 350px; border-radius: 15px; overflow: hidden;">
-        <img src="images/캡처1.png" style="width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease;">
-        <div class="balloon">BaseBall Game - Python</div>
-    </div>
-</div>
 
     </body>    
 </html>
