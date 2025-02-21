@@ -6,8 +6,7 @@
     <title>JuneYoungPark's portfolio</title>
         <style>
             .sidebar {
-                position: fixed;
-                top: 50%;
+                top: 10;
                 right: -170px; /* 오른쪽 끝에 고정 */
                 width: 90px;
                 height: 100%;
@@ -15,7 +14,9 @@
                 color: white;
                 transform: translateY(-50%);
                 border-radius: 10px 0 0 10px;
-                z-index: 9999;
+                z-index: 1000px;
+                position: fixed;
+
             }
 
             .sidebar a {
@@ -64,7 +65,6 @@
                 opacity: 0;  
                 transition: opacity 0.3s ease;  
                 white-space: nowrap;  
-
                 text-overflow: ellipsis; 
             }
 
@@ -145,20 +145,19 @@
             }
 
         </style>
-    
+        
+        
 </head>
 
 <body>
-    <div class="sidebar">
-        <a href="#name_job">Home</a>
+    <nav class="sidebar">
         <a href="#introduce">Introduce</a>
         <a href="#education">Education</a>
         <a href="#certifications">Certifications</a>
         <a href="#certifications2">Skills</a>
         <a href="#certifications3">Career</a>
-        <a href="#project">Projects</a>
-        <a href="#contacts">Contacts</a>
-    </div>
+        <a href="#project">Projects</a> 
+    </nav>
     
 
     <div id="imageContainer0" style="position: absolute; top: 110px; left: 1300px;">
@@ -225,7 +224,7 @@
     </div>
 
 
-    <div class="certifications3" id="certifications" style="position: absolute; top: 1450px; left: 1300px;">
+    <div class="certifications3" id="certifications3" style="position: absolute; top: 1450px; left: 1300px;">
         <h1>career</h1>
         <hr>
         <p>-</p>
